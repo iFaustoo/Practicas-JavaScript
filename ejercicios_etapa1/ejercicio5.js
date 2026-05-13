@@ -1,4 +1,4 @@
-function InvertirTexto(texto) {
+function invertirTexto(texto) {
     let textoInvertido = "";
 
     for (let i = texto.length - 1; i >= 0; i--) {
@@ -7,4 +7,4 @@ function InvertirTexto(texto) {
     return textoInvertido;
 }
 
-console.log(InvertirTexto('Mono-Puto'));
+console.log(invertirTexto('Mono-Puto'));
