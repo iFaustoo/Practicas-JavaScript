@@ -8,3 +8,22 @@ const alumnos = [
     { nombre: "Ana", nota: 7 },
     { nombre: "Pedro", nota: 9 }
 ];
+
+alumnos.sort((a, b) => b.nota - a.nota);
+console.log(alumnos);
+
+//HACEMOS OTRO
+//Tarea: Usá el método .sort() para ordenar el array de productos 
+//de menor a mayor (precio ascendente) según su precio.
+
+const productos = [
+  { nombre: "Teclado Mecánico", precio: 85 },
+  { nombre: "Mouse Gamer", precio: 45 },
+  { nombre: "Monitor 4K", precio: 320 },
+  { nombre: "Pad para Mouse", precio: 15 }
+];
+
+productos.sort((a, b) => a.precio - b.precio);
+
+console.log(productos);
+// Resultado esperado: Pad (15), Mouse (45), Teclado (85), Monitor (320)
