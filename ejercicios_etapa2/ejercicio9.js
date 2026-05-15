@@ -10,6 +10,6 @@ const estudiante = {
         calle: "25 de Mayo",
         ciudad: "Paraná"
     }
-}
+};
 
 console.log(`${estudiante.direccion.ciudad}`);
