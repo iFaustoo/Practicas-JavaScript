@@ -10,7 +10,7 @@ console.log(invitados.includes("Augusto"));
 //En resumen, el includes() se utiliza para devolver v o f en caso de que exista o no
 //dicho texto o elemento dentro de nuestro array u objeto
 
-const empiezaConS = invitados.find((element) => element.startsWithq("S"));
+const empiezaConS = invitados.find((element) => element.startsWith("S"));
 
 console.log(empiezaConS);
 

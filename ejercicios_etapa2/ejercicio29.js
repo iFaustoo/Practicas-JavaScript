@@ -53,15 +53,22 @@ const nums = [2, 7, 11, 15];
 const target = 9;
 
 function twoSum(nums, target) {
-    const map = new Map(); //
+    const map = new Map(); //CREAMOS UN OBJ TIPO MAP PARA HACER MEMORIA DE LO Q YA VI
     
     for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
+        const complement = target - nums[i]; //CALCULAMOS LO QUE ME FALTA PARA LLEGAR AL TARGET
         
-        if (map.has(complement)) {
-            return [map.get(complement), i];
+        if (map.has(complement)) { //ACÁ ESTOY PREGUNTANDO, YA VÍ ESE NÚMERO ANTES?
+            return [map.get(complement), i]; //DEVUELVO LAS POSICIONES
         }
         
-        map.set(nums[i], i);
+        map.set(nums[i], i); //GUARDO EL NÚMERO ACTUAL PARA FUTURAS COMPARACIONES
     }
 }
+
+//Por lo visto, esta solución es mejor ya que hace el ejercicio de una sola pasada
+//No me tengo que quedar con la idea de usar un obj tipo map, sino que debo quedarme con la idea de que
+//en vez de buscar parejas,
+//guardo lo que ya ví y pregunto si falta su complemento
+//PENSAR ASÍ:
+//busco la pareja, pregunto si la pareja ya apareció...

@@ -12,3 +12,14 @@ for (let i = 0; i < numeros.length; i++) {
         console.log(`${numeros[i]} + ${numeros[j]} = ${suma}`);
     }
 }
+
+//Este ejercicio también me gustó mucho voy a aplicarlo de nuevo xd
+
+//const numeros = [2, 4, 6, 8];
+
+//for (let i = 0; i < numeros.length; i++) {
+//    for (let j = 0; j < numeros.length; j++) {
+//        const sumaNums = numeros[i] + numeros[j];
+//        console.log(`${numeros[i]} + ${numeros[j]} = ${suma}`);
+//    }
+//}
