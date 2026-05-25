@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #2d2d2d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3d3d3d;
+    color: white;
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+    transform: scale(1.09);
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* clases preparadas para usar con js */
+/* modifico el task-item para que alinee todo */
+.task-item {
+    background-color: #3d3d3d;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px; /* la fokin separación entre el circulo, el texto y el basurero */
+}
+
+/* el texto de la tarea */
+.task-text {
+    flex: 1; 
+    transition: all 0.3s ease;
+    /* La magia para que el texto baje de renglón y no rompa la caja */
+    word-break: break-word; 
+    overflow-wrap: break-word;
+    margin: 0 10px; /* separacion extra para que no se pegue a los botones */
+    min-width: 0;
+}
+
+/* el btn circular (vacio por defecto) */
+.complete-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* el btn de borrar con el gris del body */
+.delete-btn {
+    background-color: #1a1a1a; 
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    /* el escudo para que el texto no lo aplaste o lo saque de la pantalla */
+    flex-shrink: 0; 
+}
+
+.complete-btn.completed {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.app-title {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
