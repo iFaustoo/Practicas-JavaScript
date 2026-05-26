@@ -1,0 +1,169 @@
+body {
+    background-color: rgb(29, 26, 26);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: rgb(58, 57, 57);
+    border: none;
+    border-radius: 20px;
+    /* PARA RESPONSIVE */
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    /* PARA RESPONSIVE */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: white;
+}
+.form-main {
+    display: flex;
+    gap: 20px;
+    /* PARA ESTIRAR EL INPUT */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-form {
+    padding: 10px;
+    color: white;
+    border: solid black;
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: rgb(49, 48, 48);
+    /* PARA ESTIRAR EL INPUT */
+    width: 100%;
+    flex: 1;
+}
+
+.button-add {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(76, 168, 76);
+    font-size: 20px;
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-add:hover {
+    background-color: rgb(31, 214, 31);
+    transform: scale(1.03);
+}
+
+.button-delete {
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(59, 56, 56);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-delete:hover {
+    background-color: gray;
+    transform: scale(1.03);
+}
+
+.button-completed {
+    border: none;
+    background-color: rgb(100, 97, 97);
+    font-size: 15px;
+    color: rgb(26, 235, 26);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-completed:hover {
+    color: red;
+    transform: scale(1.4);
+}
+
+.item-text {
+    /* PARA RESPONSIVE */
+    flex: 1;
+    word-break: break-word;
+    text-align: left;
+}
+
+.item-class {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+    background-color: rgb(100, 97, 97);
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    gap: 20px;
+    /* PARA RESPONSIVE */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.completed {
+    color: gray;
+}
+
+/*----------------- BOTÓN PARA CAMBIAR TEMAS -----------------*/
+
+/* cuando el body tenga la clase light-mode, va a cambiar su fondo */
+body.light-mode {
+    background-color: #e0e0e0;
+}
+
+/* cuando el body tenga la clase light-mode, el contenedor de adentro tmb cambia */
+body.light-mode .container {
+    background-color: #ffffff;
+}
+
+/* esto para que las letras del titulo pasen a negro */
+body.light-mode .title {
+    color: #1d1a1a;
+}
+
+/* alineado del boton arriba izq */
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%; /* ESTO LO HACE REDONDO */
+    background-color: rgb(58, 57, 57);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+/* transformacion del boton para cuando pasemos a light mode */
+body.light-mode .theme-btn {
+    background-color: #ffffff;
+    color: #1d1a1a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
