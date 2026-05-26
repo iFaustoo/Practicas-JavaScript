@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.button-add {
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(96, 207, 96);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.button-add:hover {
+    background-color: rgb(34, 233, 34);
+    transform: scale(1.03);
+}
+
+.button-subtract {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(236, 81, 81);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.button-subtract:hover {
+    background-color: rgb(255, 33, 33);
+    transform: scale(1.03);
+}
+
+.button-reset {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 18px;
+    transition: all 0.3s ease; 
+}
+
+.button-reset:hover {
+    background-color: rgb(165, 162, 162);
+    transform: scale(1.03);
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.my-counter {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
