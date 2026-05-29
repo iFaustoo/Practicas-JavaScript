@@ -167,20 +167,3 @@ body.light-mode .theme-btn {
     color: #1d1a1a;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
-/*------------------ HISTORIAL ------------------*/
-
-.history-container {
-    display: flex;
-    width: 30%;
-}
-
-.history-header {
-    background-color: red;
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    height: 25%;
-    justify-content: left;
-    padding-left: 50%;
-}

@@ -21,3 +21,4 @@ export function initTheme() {
     const btn = createThemeButton();
     setupThemeLogic(btn);
 }
+
