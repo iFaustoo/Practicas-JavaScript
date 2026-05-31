@@ -3,6 +3,51 @@ export function initTasks() {
     const addButton = document.getElementById(`add-button`);
     const myList = document.getElementById(`list`);
 
+    /* logica de mi historial */
+    const historyList = document.getElementById('history-list');
+    const toggleHistoryBtn = document.getElementById('toggle-history-btn');
+
+    toggleHistoryBtn.addEventListener(`click`, () => {
+        historyList.classList.toggle('open');
+        
+        if (historyList.classList.contains('open')) {
+            toggleHistoryBtn.textContent = "▼";
+        } else {
+            toggleHistoryBtn.textContent = "▲";
+        }
+    });
+
+    const clearHistoryBtn = document.getElementById('clear-history-btn');
+    clearHistoryBtn.addEventListener(`click`, () => {
+        historyList.innerHTML = "";
+        localStorage.removeItem('deletedTasks');
+    });
+
+    function createHistoryItem(text) {
+        const historyItem = document.createElement('li');
+        historyItem.classList.add('history-item');
+        historyItem.textContent = text;
+        
+        historyList.appendChild(historyItem);
+    }
+
+    let deletedTasks = JSON.parse(localStorage.getItem('deletedTask')) || [];
+
+    deletedTasks.forEach(text => {
+        createHistoryItem(text);
+    });
+
+    function saveDeletedTasksToHistory() {
+        const deletedTasks = [];
+        const taskElements = document.querySelectorAll('.history-item');
+
+        taskElements.forEach(item => {
+            deletedTasks.push(item.textContent);
+        });
+        localStorage.setItem('deletedTask', JSON.stringify(deletedTasks));
+    }
+    /* ------------------------ */
+
     let savedTasks = JSON.parse(localStorage.getItem('myTasks')) || [];
 
     savedTasks.forEach(text => {
@@ -25,8 +70,13 @@ export function initTasks() {
         }); ESTA MANERA ESTARÍA MAL*/
 
         item.querySelector('.button-delete').addEventListener(`click`, () => {
+            const taskText = item.querySelector('.item-text').textContent;
+            createHistoryItem(taskText);
+
             item.remove();
+
             saveTasksToLocalStorage();
+            saveDeletedTasksToHistory();
         });
 
         /*const buttonCompleted = document.querySelector('button-completed');

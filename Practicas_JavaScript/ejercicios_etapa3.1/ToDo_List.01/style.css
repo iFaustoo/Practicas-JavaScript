@@ -76,7 +76,7 @@ body {
     border: none;
     border-radius: 15px;
     padding: 10px;
-    background-color: rgb(59, 56, 56);
+    background-color: rgb(77, 73, 73);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -166,4 +166,97 @@ body.light-mode .theme-btn {
     background-color: #ffffff;
     color: #1d1a1a;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ---------------------- HISTORIAL ---------------------- */
+
+/* mi container principal */
+.app-wrapper {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.history-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgb(58, 57, 57);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.history-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.history-title {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    color: white;
+    margin: 0;
+}
+
+.button-toggle {
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(76, 168, 76);
+    color: white;
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-toggle:hover {
+    background-color: rgb(31, 214, 31);
+    transform: scale(1.03);
+}
+
+/* ACORDEON FAQ PRIMERA VEZ Q LO HAGO */
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 20px;
+    width: 100%;
+    list-style: none;
+    /* a partir de acá es la magia del acordeon */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out, margin-top 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history-list.open {
+    max-height: 500px;
+    margin-top: 20px; /* separación del titulo al abrir */
+    overflow-y: scroll;
+}
+
+.history-item {
+    padding: 9px;
+    background-color: rgb(63, 61, 61);
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-break: break-word;
+    width: 100%;
+    box-sizing: border-box;
 }
